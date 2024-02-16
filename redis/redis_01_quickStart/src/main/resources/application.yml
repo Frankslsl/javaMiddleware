@@ -1,0 +1,14 @@
+spring:
+  data:
+    redis:
+      host: 192.168.137.128
+      port: 6379
+      password: wodediannao
+      database: 0
+      jedis:
+        pool:
+          enabled: true
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: 1000

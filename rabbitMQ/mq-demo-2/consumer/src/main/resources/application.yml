@@ -1,0 +1,18 @@
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+spring:
+  rabbitmq:
+    host: 20.14.93.178
+    port: 5672
+    virtual-host: /
+    username: root
+    password: wodediannao
+    listener:
+      simple:
+        acknowledge-mode: auto
+        retry:
+          enabled: true
+          initial-interval: 2000
+          multiplier: 2
+          max-attempts: 3

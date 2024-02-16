@@ -1,0 +1,24 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    username: root
+    password: wodediannao
+    url: jdbc:mysql://192.168.137.138:3306/db
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      max-wait: 5000
+      connect-timeout: 5000
+      max-active: 20
+      min-idle: 5
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+

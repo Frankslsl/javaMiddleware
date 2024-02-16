@@ -1,0 +1,19 @@
+
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+
+spring:
+  rabbitmq:
+    host: 192.168.137.138
+    port: 5672
+    virtual-host: /
+    username: root
+    password: wodediannao
+    publisher-confirm-type: correlated #确认类型异步回调模式,和normal相比不会阻塞进程
+    publisher-returns: true             #开启生产者确认
+    template:
+      mandatory: true                   #定义消息路由失败的策略.true则回调ReturnCallBack,false为直接丢弃
+
+
+
